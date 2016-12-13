@@ -1,0 +1,13 @@
+{
+  "test": true,
+  "name": "Web Kingdom",
+  "port": 80,
+  "secret": "apple banana",
+  "db": "./dbData",
+  "email": {
+    "user": "seudein@gmail.com",
+    "clientId": "921115382801-j80h9h7vurkdo6879gfbsrkscmj1t1i4.apps.googleusercontent.com",
+    "clientSecret": "IIc-fW5jIsBddIl_V5MX9Udv",
+    "refreshToken": "1/KK04YfWN81BiJUmGVacCfRwVpjahn52ovFO27Ljn4Q0"
+  }
+}
