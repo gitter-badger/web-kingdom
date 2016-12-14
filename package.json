@@ -24,9 +24,11 @@
     "jquery": "^3.1.1",
     "mongodb": "^2.2.16",
     "morgan": "^1.7.0",
+    "nodemailer": "^2.7.0",
     "pug": "^2.0.0-beta6",
     "tingodb": "^0.4.2",
     "tracer": "^0.8.7",
-    "two.js": "^0.6.0"
+    "two.js": "^0.6.0",
+    "xoauth2": "^1.2.0"
   }
 }
