@@ -1,11 +1,17 @@
 {
   "name": "web-kingdom",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Kingdom simulation in a web browser",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo 'have a meeting with mocha'"
+    "test": "mocha --timeout 10000",
+    "coverage": "istanbul cover _mocha -- --timeout 10000 -R spec",
+    "preversion": "npm run-script make_public",
+    "postversion": "npm run-script pushf && git checkout private && git cherry-pick public && npm run-script push",
+    "pushf": "git push -f && git push -f --tags",
+    "push": "git push && git push --tags",
+    "make_public": "git checkout public && git reset --hard private && git filter-branch -f --tree-filter 'rm -f ./env/*/config.json' -- public"
   },
   "keywords": [
     "kingdom",
@@ -17,18 +23,13 @@
   "author": "JestDotty",
   "license": "ISC",
   "dependencies": {
+    "async": "^2.1.4",
     "bootstrap": "^3.3.7",
-    "connect-mongo": "^1.3.2",
     "express": "^4.14.0",
-    "express-session": "^1.14.2",
     "jquery": "^3.1.1",
-    "mongodb": "^2.2.16",
-    "morgan": "^1.7.0",
-    "nodemailer": "^2.7.0",
+    "mocha": "^3.2.0",
     "pug": "^2.0.0-beta6",
-    "tingodb": "^0.4.2",
-    "tracer": "^0.8.7",
     "two.js": "^0.6.0",
-    "xoauth2": "^1.2.0"
+    "web-app": "git+https://github.com/seudein/web-app.git#public"
   }
 }

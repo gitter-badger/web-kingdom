@@ -1,0 +1,20 @@
+doctype html
+html(lang='en')
+	head
+		title
+			| #{name} - #{version}
+			
+		link(rel='stylesheet' href='/css/bootstrap.min.css')
+		link(rel='stylesheet' href='/css/font-awesome.min.css')
+
+		script(src='/js/jquery.min.js')
+		script(src='/js/tether.min.js')
+		script(src='/js/bootstrap.min.js')
+		
+		block head
+	
+	body
+		include _navbar
+		
+		.col-xs-12.offset-sm-1.col-sm-10.offset-lg-2.col-lg-8
+			block content
