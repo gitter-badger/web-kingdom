@@ -1,6 +1,6 @@
 {
   "name": "web-kingdom",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Kingdom simulation in a web browser",
   "main": "index.js",
   "scripts": {
